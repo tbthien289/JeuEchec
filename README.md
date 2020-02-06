@@ -6,31 +6,31 @@ Auteur: TRAN Bao Thien - uapv1900181 - M2 ILSEN CLA
 ![alt text](ChessDiagram.jpg)
 Diagramme est constitué de 5 parties principales : Board, Cell, Piece, ChessGame et Player.
 
-- Board : contient les principaux attributs du jeu comme : Cell[8][8], JPanel gui, …Il est responsable de la configuration de l'interface du jeu.
-setupGUI() : mettre en place le cadre de l'échiquier grâce à JFrame
-setupCell() : mettre en place 64 boutons noir et blanche grâce à JButton
-setupPiece() : mettre en place les pièces
-movePiece() : pour déplacer les pièces
-movePieceSimulate () : pour déplacer une pièce (ne change pas l'image de la pièce)
-updateTurn() : gérer le jeu au tour par tour
-posibleMove() : prendre tous les mouvements possibles de toutes les pièces
+- Board : contient les principaux attributs du jeu comme : Cell[8][8], JPanel gui, …Il est responsable de la configuration de l'interface du jeu.\
+setupGUI() : mettre en place le cadre de l'échiquier grâce à JFrame\
+setupCell() : mettre en place 64 boutons noir et blanche grâce à JButton\
+setupPiece() : mettre en place les pièces\
+movePiece() : pour déplacer les pièces\
+movePieceSimulate () : pour déplacer une pièce (ne change pas l'image de la pièce)\
+updateTurn() : gérer le jeu au tour par tour\
+posibleMove() : prendre tous les mouvements possibles de toutes les pièces\
 isEnd() : vérifier la fin du jeu
 
-- Cell : aide à conserver l'état des pièces d'échecs et à gérer les événements de la souris
-setCellMouseEvent() : mettre en place des événements de souris pour les boutons
-move() : pour déplacer une pièce
-moveSimulate() : pour déplacer une pièce (ne change pas l'image de la pièce)
+- Cell : aide à conserver l'état des pièces d'échecs et à gérer les événements de la souris\
+setCellMouseEvent() : mettre en place des événements de souris pour les boutons\
+move() : pour déplacer une pièce\
+moveSimulate() : pour déplacer une pièce (ne change pas l'image de la pièce)\
 posibleMove() : prendre tous les mouvements possibles de la pièce en cours
 
-- Piece : c’est une classe abstraite. Les classes étendues (Pawn, King, Queen, Rook, Knight, Bishop) mettent en œuvre les opérations abstraites
+- Piece : c’est une classe abstraite. Les classes étendues (Pawn, King, Queen, Rook, Knight, Bishop) mettent en œuvre les opérations abstraites\
 canMove() : le mouvement valide pour une pièce. Cette méthode implémente les règles de mouvement. Par exemple, le canMove () d'une classe de Pions assure que le Pion ne peut se déplacer que dans la direction du côté adverse. En plus, dans chaque classe étendue, il y a les méthodes conditionAttack() et conditionMove() pour déterminer le mouvement des pièces.
 
-- ChessGame : pour contrôler le déroulement d'un jeu. Cette classe possède des principales méthodes suivantes
-initGame() : mettre en place les joueurs et l’interface
+- ChessGame : pour contrôler le déroulement d'un jeu. Cette classe possède des principales méthodes suivantes\
+initGame() : mettre en place les joueurs et l’interface\
 startGame() : contrôler le déroulement d'un jeu
 
-- Player : pour représente le joueur. Notamment  l’implémentation d’une intelligence artificielle (algorithme min-max)
-calculateWithMinimax() : trouver le meilleur façon pour déplacer les pièce grâce à algorithme min-max.
+- Player : pour représente le joueur. Notamment  l’implémentation d’une intelligence artificielle (algorithme min-max)\
+calculateWithMinimax() : trouver le meilleur façon pour déplacer les pièce grâce à algorithme min-max.\
 excuteWithMinimax() : après avoir calculé le meilleur façon, cette méthode permet de réaliser le meilleur mouvement.
 
 ## Design Pattern
